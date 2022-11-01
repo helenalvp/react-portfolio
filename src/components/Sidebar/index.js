@@ -5,24 +5,30 @@ import LogoSubtitle from "../../assets/images/logo_sub.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons"
+import { useState } from "react"
 
 const linkColor = "#4d4d4e"
 
-const Sidebar = () => (
+const Sidebar = () =>{ 
+    const [showNav, setShowNav] = useState(false);
+    
+    return (
     <div className="nav-bar">
-        <Link className="logo" to="/">
+        <Link className="logo" to="/" onClick={()=> setShowNav(false)}>
             <img src={LogoS} alt="logo"/>
             <img clasName="sub-logo" src={LogoSubtitle} alt="logo-subtitle"/>
         </Link>
-        <nav>
-            <NavLink exact="true" activateclassname="active" to="/">
+
+
+        <nav className={showNav ? 'mobile-show' : ""}>
+            <NavLink exact="true" className="home" activeclassname="active" to="/"  onClick={()=> setShowNav(false)}>
                 <FontAwesomeIcon icon={faHome} color={linkColor}/>
             </NavLink>
-            <NavLink exact="true" activateclassname="active" className="about-link" to="/about">
-                <FontAwesomeIcon icon={faUser} color={linkColor}/>
+            <NavLink activeclassname="active" className="about-link" to="/about" onClick={()=> setShowNav(false)} >
+                <FontAwesomeIcon icon={faUser} color={linkColor}  />
             </NavLink>
-            <NavLink exact="true" activateclassname="active" className="contact-link" to="/contact">
-                <FontAwesomeIcon icon={faEnvelope} color={linkColor}/>
+            <NavLink  activeclassname="active" className="contact-link" to="/contact" onClick={()=> setShowNav(false)}>
+                <FontAwesomeIcon icon={faEnvelope} color={linkColor} />
             </NavLink>
         </nav>
         <ul>
@@ -45,7 +51,7 @@ const Sidebar = () => (
         </ul>
     </div>
     
-)
+)}
 
 
 export default Sidebar
