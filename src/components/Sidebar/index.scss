@@ -89,6 +89,21 @@ nav {
                 content:"CONTACT"
             }
         }
+        a.projects-link{
+            &:after{
+                content:"PROJECTS"
+            }
+        }
+        a.services-link{
+            &:after{
+                content:"SERVICES"
+            }
+        }
+        a.testimonials-link{
+            &:after{
+                content:"TESTIMONIALS"
+            }
+        }
 
         a.active{
             svg{
