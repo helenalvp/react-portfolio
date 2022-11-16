@@ -127,12 +127,14 @@ nav {
                     display: block;
                     font-size: 15px;
                     line-height: 16px;
+                    color: #4d4d4e;
 
-                    &:hover svg{
-                        color: #ffd700 //NOTE: MAKE TO VARIABLE
-                    }
+                    &:hover {
+                        .anchor-icon {
+                          color: #ffd700;
+                        }
                 }
             }
         }
     
-    
+        }

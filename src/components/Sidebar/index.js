@@ -21,7 +21,7 @@ const Sidebar = () =>{
 
 
         <nav className={showNav ? 'mobile-show' : ""}>
-            <NavLink exact="true" className="home" activeclassname="active" to="/"  onClick={()=> setShowNav(false)}>
+            <NavLink exact="true" activeclassname="active" to="/"  onClick={()=> setShowNav(false)}>
                 <FontAwesomeIcon icon={faHome} color={linkColor}/>
             </NavLink>
             <NavLink activeclassname="active" className="about-link" to="/about" onClick={()=> setShowNav(false)} >
@@ -31,11 +31,11 @@ const Sidebar = () =>{
                 <FontAwesomeIcon icon={faFolderOpen} color={linkColor} />
             </NavLink>
             <NavLink  activeclassname="active" className="services-link" to="/services" onClick={()=> setShowNav(false)}>
-                <FontAwesomeIcon icon={faMicrochip} color={linkColor} />
-            </NavLink>
-            <NavLink  activeclassname="active" className="testimonials-link" to="/testimonials" onClick={()=> setShowNav(false)}>
                 <FontAwesomeIcon icon={faUsers} color={linkColor} />
             </NavLink>
+            {/* <NavLink  activeclassname="active" className="testimonials-link" to="/testimonials" onClick={()=> setShowNav(false)}>
+                <FontAwesomeIcon icon={faUsers} color={linkColor} />
+            </NavLink> */}
             <NavLink  activeclassname="active" className="contact-link" to="/contact" onClick={()=> setShowNav(false)}>
                 <FontAwesomeIcon icon={faEnvelope} color={linkColor} />
             </NavLink>
